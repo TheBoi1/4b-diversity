@@ -3,6 +3,7 @@ var score= 0;
 function cookie_clicker() {
 	score= score+ 1;
 	document.getElementById("score").value=score;
+
 }
 
 function chef() {
