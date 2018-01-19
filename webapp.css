@@ -1,8 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
-
-
-    
+body {
+	background-image: url("fire.jpeg");
+	background-size:40px;
+}
 
 
