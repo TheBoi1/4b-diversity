@@ -19,6 +19,7 @@ function shop(sel) {
 	switch(sel) {
 		case "grill":
 			if( score >= 100 ) {
+				score-=100;
 				grill++;
 			}
 	}
