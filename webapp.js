@@ -3,6 +3,7 @@
 // global variables
 var score= 0; 
 var grill = 0;
+var chef = 0;
 
 function cookie_clicker() {
 	if( grill >= 0 ) {
@@ -22,12 +23,12 @@ function shop(sel) {
 				score-=100;
 				grill++;
 			}
+		case "chef":
 	}
 }
 
 // dispense bonuses every second
-/*
 setInterval(bonus, 1000);
 function bonus() {
 	score+=grill * 
-}*/
+}
