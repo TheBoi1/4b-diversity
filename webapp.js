@@ -4,7 +4,6 @@
 var score= 0; 
 var grill = 0;
 var chef = 0;
-var trap = 0;
 
 function cookie_clicker() {
 	if( grill >= 0 ) {
