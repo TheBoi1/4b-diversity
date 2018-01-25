@@ -3,7 +3,7 @@
 // global variables
 var score= 0; 
 var grill = 0;
-
+var trap=0
 function cookie_clicker() {
 	if( grill >= 0 ) {
 		score+= 1+grill;
@@ -22,6 +22,9 @@ function shop(sel) {
 				score-=100;
 				grill++;
 			}
+		
+	
+			
 	}
 }
 
@@ -30,4 +33,5 @@ function shop(sel) {
 setInterval(bonus, 1000);
 function bonus() {
 	score+=grill * 
-}*/
+}
+*/
