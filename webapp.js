@@ -6,6 +6,7 @@ var grill = 0;
 var chef = 0;
 var trap = 0;
 var cat = 0;
+var poison= 0;
 
 window.onload = function() {
 	// add event listeners
@@ -20,6 +21,9 @@ window.onload = function() {
 	});
 		document.getElementById("catsButton").addEventListener("click", function() {
 		shop("cat");
+	});
+		document.getElementById("poisonButton").addEventListener("click", function() {
+		shop("poison");
 	});
 
 
@@ -60,6 +64,13 @@ function shop(sel) {
 				score-=1000;
 				cat++;	
 			}
+			break;
+		case "poison":
+			if(score >= 2500) {
+				score-=2500;
+				poison++;	
+			}
+			break;
 	}
 	document.getElementById("score").value=score; 
 }
@@ -70,5 +81,6 @@ function bonus() {
 	score+=chef*1;
 	score+=trap*2.5;
 	score+=cat*10;
+	score+=poison*20;
 	document.getElementById("score").value=score; 
 }
