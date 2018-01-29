@@ -4,6 +4,8 @@
 var score= 0; 
 var grill = 0;
 var chef = 0;
+var trap = 0;
+var cat = 0;
 
 window.onload = function() {
 	// add event listeners
@@ -13,6 +15,14 @@ window.onload = function() {
 	document.getElementById("chefButton").addEventListener("click", function() {
 		shop("chef");
 	});
+		document.getElementById("trapButton").addEventListener("click", function() {
+		shop("trap");
+	});
+		document.getElementById("catsButton").addEventListener("click", function() {
+		shop("cat");
+	});
+
+
 };
 
 function cookie_clicker() {
@@ -39,6 +49,17 @@ function shop(sel) {
 				chef++;	
 			}
 			break;
+		case "trap":
+			if(score >= 250) {
+				score-=250;
+				trap++;
+			}
+			break;
+		case "cat":
+			if(score >= 1000) {
+				score-=1000;
+				cat++;	
+			}
 	}
 	document.getElementById("score").value=score; 
 }
@@ -47,5 +68,7 @@ function shop(sel) {
 setInterval(bonus, 1000);
 function bonus() {
 	score+=chef*1;
+	score+=trap*2.5;
+	score+=cat*10;
 	document.getElementById("score").value=score; 
 }
