@@ -5,6 +5,16 @@ var score= 0;
 var grill = 0;
 var chef = 0;
 
+window.onload = function() {
+	// add event listeners
+	document.getElementById("grillButton").addEventListener("click", function() {
+		shop("grill");
+	});
+	document.getElementById("chefButton").addEventListener("click", function() {
+		shop("chef");
+	});
+};
+
 function cookie_clicker() {
 	if( grill >= 0 ) {
 		score+= 1+grill;
