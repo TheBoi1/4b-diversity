@@ -9,16 +9,11 @@ body {
 
 
 #store {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; 
 
 	color: red
 }
-#stats {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	color:  red;
 
-	
-}
 #stats {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	color: red;
@@ -28,6 +23,6 @@ body {
 
 #shopName {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	color: teal;
+	color: red;
 }
 
