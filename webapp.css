@@ -13,11 +13,17 @@ body {
 
 	color: red
 }
-
+h2.top {
+	margin-top: -100px;
+}
+p.top {
+	margin-top: -100px;
+}
 #stats {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	color: red;
-	text-align: center;
+	vertical-align: text-top;
+	text-align:center;
 
 }
 
