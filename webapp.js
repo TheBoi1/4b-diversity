@@ -7,6 +7,8 @@ var chef = 0;
 var trap = 0;
 var cat = 0;
 var poison= 0;
+var exterminator = 0;
+var factory = 0;
 
 window.onload = function() {
 	// add event listeners
@@ -25,7 +27,12 @@ window.onload = function() {
 		document.getElementById("poisonButton").addEventListener("click", function() {
 		shop("poison");
 	});
-
+	document.getElementById("catcherButton").addEventListener("click", function() {
+		shop("catcher");
+	});
+	document.getElementById("factoryButton").addEventListener("click", function() {
+		shop("factory");
+	});
 
 };
 
@@ -71,6 +78,17 @@ function shop(sel) {
 				poison++;	
 			}
 			break;
+		case "catcher":
+			if(score >= 5000) {
+				score -= 5000;
+				exterminator++;
+			}
+			break;
+		case "factory":
+			if(score >= 50000) {
+				score -= 50000;
+				factory++;	
+			}
 	}
 	document.getElementById("score").value=score; 
 }
@@ -82,5 +100,7 @@ function bonus() {
 	score+=trap*2.5;
 	score+=cat*10;
 	score+=poison*20;
+	score+=exterminator*45;
+	score+=factory*60;
 	document.getElementById("score").value=score; 
 }
