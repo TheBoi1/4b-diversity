@@ -9,6 +9,8 @@ var cat = 0;
 var poison= 0;
 var exterminator = 0;
 var factory = 0;
+var planet = 0;
+var ratgod = 0;
 
 window.onload = function() {
 	// add event listeners
@@ -32,6 +34,12 @@ window.onload = function() {
 	});
 	document.getElementById("factoryButton").addEventListener("click", function() {
 		shop("factory");
+	});
+	document.getElementById("planetButton").addEventListener("click", function() {
+		shop("planet");
+	});
+	document.getElementById("jesusButton").addEventListener("click", function() {
+		shop("ratgod");
 	});
 
 };
@@ -89,6 +97,19 @@ function shop(sel) {
 				score -= 50000;
 				factory++;	
 			}
+			break;
+		case "planet":
+			if(score >= 100000) {
+				score -= 100000;
+				planet++;	
+			}
+			break;
+		case "ratgod":
+			if(score >= 50000000) {
+			score -= 50000000;
+			ratgod++;	
+			}
+			break;
 	}
 	document.getElementById("score").value=score; 
 }
@@ -102,5 +123,7 @@ function bonus() {
 	score+=poison*20;
 	score+=exterminator*45;
 	score+=factory*60;
+	score+=planet*100;
+	score+=ratgod*250;
 	document.getElementById("score").value=score; 
 }
