@@ -85,8 +85,8 @@ function shop(sel) {
 			else alert( "You don't have enough rats!")
 			break;
 		case "poison":
-			if(score >= 2500) {
-				score-=2500;
+			if(score >= 1500) {
+				score-=1500;
 				poison++;	
 			}
 			else alert( "You don't have enough rats!")
@@ -138,3 +138,4 @@ function bonus() {
 	document.getElementById("score").value=score; 
 }
 
+t

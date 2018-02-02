@@ -17,18 +17,19 @@
 <body> 
 
 <!--Add your HTML here-->
-<style>
-
-</style>
 
 <div id="wrapper">
 
+
 		<font color="white"><h1>Rat Clicker</h1>
 		</font>
+
+	<div id="header">
+		<h1>Rat Clicker</h1>
+
 	</div>
-	
-<font> <h2 id="shopName" > </h2></font>
-<div id="mainbutton">
+	<div id="leftCol">
+<h2 id="shopName" > </h2>
 <button onClick="cookie_clicker();">
 
 
@@ -38,8 +39,12 @@
 
 </button>
 
-</div>
+
+
 <input  id="score" type="text" value="0">
+
+</div>
+<input  id="score" type="text" value="0" readonly>
 
 <div id="store">
 		<h2>Store</h2>
@@ -56,13 +61,15 @@
 		<input id="catcherButton" type="button" value="Rat Catcher( 5,000 )" >Hire a rat exterminator to exterminate rats for you. (+45 rat per second).<br>
 		<input id="factoryButton" type="button" value="Rat Factory( 50,000 )" >Buy a factory so you can  catch and grill more rats. (+50 rat per click).<br>
 		<input id="planetButton" type="button" value="Rat Planet( 100,000 )" >Travel to a rat planet for lots of rats at a time. (+100 rat per second).<br>
-		<input id="jesusButton" type="button" value="Rat Jesus( 50,000,000 )" >Get Rat Jesus on your side for tons of rats. (+250 rat per click).<br>
+		<input id="jesusButton" type="button" value="Rat Jesus( 50,000,000 )" >Get Rat Jesus on your side for tons of rats. (+1000 rat per second).<br>
 
 </div>
+</div>
+<div id="rightCol">
 <div id="stats">
-		<h2 class= "top">Stats</h2><input>
+		<h2 class= "top">Stats</h2>
 		<p>RPS: <input id="RPS" type="text" value="0"></p>
-		<p> RPS:<input id="rats per click"	class= "top"> </p>
+		<p> Rats per click:<input id="rats per click"	class= "top"> </p>
 		<p> Grills:<input id="grills" class= "top"></p>
 		<p> Chef:<input id="chef" class= "top"></p>
 		<p>Trap:<input id="trap" class= "top"></p>
@@ -73,6 +80,7 @@
 		<p>Planet:<input id="planet"	 class= "top"> </p>
 		<p>Jesus:<input id="jesus" class= "top"> </p>
 	</div>
+</div>
 </div>
 </body>
 
