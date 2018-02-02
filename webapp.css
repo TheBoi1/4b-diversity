@@ -6,7 +6,9 @@ body {
 	background-size:2300px;
 }
 
-
+h1 {
+	color: white;
+}
 
 #store {
 	font family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; 
