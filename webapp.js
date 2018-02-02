@@ -61,54 +61,64 @@ function shop(sel) {
 				score-=100;
 				grill++;
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "chef":
 			if(score >= 150) {
 				score-=150;
 				chef++;	
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "trap":
 			if(score >= 250) {
 				score-=250;
 				trap++;
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "cat":
 			if(score >= 1000) {
 				score-=1000;
 				cat++;	
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "poison":
 			if(score >= 2500) {
 				score-=2500;
 				poison++;	
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "catcher":
 			if(score >= 5000) {
 				score -= 5000;
 				exterminator++;
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "factory":
 			if(score >= 50000) {
 				score -= 50000;
 				factory++;	
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "planet":
 			if(score >= 100000) {
 				score -= 100000;
 				planet++;	
+				
 			}
+			else alert( "You don't have enough rats!")
 			break;
 		case "ratgod":
 			if(score >= 50000000) {
 			score -= 50000000;
 			ratgod++;	
 			}
+			else alert( "You don't have enough rats!")
 			break;
 	}
 	document.getElementById("score").value=score; 
