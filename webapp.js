@@ -137,3 +137,4 @@ function bonus() {
 	score+=ratgod*250;
 	document.getElementById("score").value=score; 
 }
+
