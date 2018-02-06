@@ -11,7 +11,7 @@ h1 {
 }
 
 #store {
-	font family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif; 
+	font-family: "Comic Sans MS", cursive, sans-serif;
 
 	color: red;
 }
@@ -20,19 +20,21 @@ h1 {
 h2.top {
 	margin-top: -100px;
 }
+
 p.top {
 	margin-top: -100px;
 }
+
 #stats {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
 	vertical-align: text-top;
 	text-align:center;
 
 }
 
-#shopName {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+#wrapper {
+	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
 }
 
