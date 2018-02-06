@@ -9,14 +9,14 @@ body {
 h1 {
 	color: white;
 }
-
+/* Colors for store and font*/
 #store {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 
 	color: red;
 }
 
-
+/*  Stat location on screen*/
 h2.top {
 	margin-top: -100px;
 }
@@ -24,6 +24,7 @@ h2.top {
 p.top {
 	margin-top: -100px;
 }
+
 /* stats text align, fonts, and color*/
 #stats {
 	font-family: "Comic Sans MS", cursive, sans-serif;
@@ -32,9 +33,8 @@ p.top {
 	text-align:center;
 
 }
-/* wrapper color and fonts*/
-#wrapper {
-	font-family: "Comic Sans MS", cursive, sans-serif;
-	color: red;
-}
 
+				
+				
+				
+			
