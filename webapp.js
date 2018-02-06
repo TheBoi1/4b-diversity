@@ -143,7 +143,20 @@ function shop(sel) {
 }
 
 function saveCookies() {
-		
+	var exdays = 100000;
+	var date = new Date();
+	date.setTime(date.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	var expires = "expires=" + date.toUTCString();
+	document.cookie = "score=" + score + ";" + expires;
+	document.cookie = "grills=" + grill + ";" + expires;
+	document.cookie = "chefs=" + chef + ";" + expires;
+	document.cookie = "trap=" + trap + ";" + expires;
+	document.cookie = "cats=" + cat + ";" + expires;
+	document.cookie = "poison=" + poison + ";" + expires;
+	document.cookie = "exterminators=" + exterminator + ";" + expires;
+	document.cookie = "factories=" + factory + ";" + expires;
+	document.cookie = "planets=" + planet + ";" + expires;
+	document.cookie = "ratgods=" + ratgod + ";" + expires;
 }
 
 function loadCookies() {
@@ -162,6 +175,6 @@ function bonus() {
 	score+=planet*100;
 	score+=ratgod*250;
 	document.getElementById("score").value=score; 
+	saveCookies();
 }
 
-t
