@@ -24,7 +24,7 @@ h2.top {
 p.top {
 	margin-top: -100px;
 }
-
+/* stats text align, fonts, and color*/
 #stats {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
@@ -32,7 +32,7 @@ p.top {
 	text-align:center;
 
 }
-
+/* wrapper color and fonts*/
 #wrapper {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
