@@ -3,7 +3,10 @@
 
 body {
 	background-image: url("blue.jpg");
-	background-size:2300px;
+	background-size:2400px;
+}
+#score {
+	text-align: right;
 }
 
 h1 {
@@ -29,7 +32,7 @@ p.top {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
 	vertical-align: text-top;
-	text-align:center;
+
 
 }
 /* wrapper color and fonts*/
