@@ -1,7 +1,7 @@
 // JavaScript Document
 
 // global variables
-var score= 0; 
+var score= 0;
 var grill = 0;
 var chef = 0;
 var trap = 0;
@@ -10,9 +10,11 @@ var poison= 0;
 var exterminator = 0;
 var factory = 0;
 var planet = 0;
-var ratgod = 0;
+var jesus = 0;
 
 window.onload = function() {
+	loadCookies();
+	update_values();
 	// add event listeners
 	document.getElementById("grillButton").addEventListener("click", function() {
 		shop("grill");
@@ -39,10 +41,23 @@ window.onload = function() {
 		shop("planet");
 	});
 	document.getElementById("jesusButton").addEventListener("click", function() {
-		shop("ratgod");
+		shop("jesus");
 	});
 
 };
+
+function update_values() {
+	document.getElementById("score").value=score;        
+	document.getElementById("grill").value=grill;   
+	document.getElementById("chef").value=chef;  
+	document.getElementById("trap").value=trap;     
+	document.getElementById("cat").value=cat;    
+	document.getElementById("poison").value=poison;
+	document.getElementById("catcher").value=catcher;
+	document.getElementById("factory").value=factory;   
+	document.getElementById("planet").value=planet;
+	document.getElementById("jesus").value=jesus;
+}
 
 function cookie_clicker() {
 	if( grill >= 0 ) {
@@ -50,7 +65,7 @@ function cookie_clicker() {
 	} else {
 		score++;
 	}
-	document.getElementById("score").value=score;                           
+	update_values();                           
 }
 
 // for buying items
@@ -60,6 +75,7 @@ function shop(sel) {
 			if( score >= 100 ) {
 				score-=100;
 				grill++;
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -69,6 +85,7 @@ function shop(sel) {
 			if(score >= 150) {
 				score-=150;
 				chef++;	
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -78,6 +95,7 @@ function shop(sel) {
 			if(score >= 250) {
 				score-=250;
 				trap++;
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -87,6 +105,7 @@ function shop(sel) {
 			if(score >= 1000) {
 				score-=1000;
 				cat++;	
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -96,6 +115,7 @@ function shop(sel) {
 			if(score >= 1500) {
 				score-=1500;
 				poison++;	
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -105,6 +125,7 @@ function shop(sel) {
 			if(score >= 5000) {
 				score -= 5000;
 				exterminator++;
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -114,6 +135,7 @@ function shop(sel) {
 			if(score >= 50000) {
 				score -= 50000;
 				factory++;	
+				update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
@@ -123,23 +145,25 @@ function shop(sel) {
 			if(score >= 100000) {
 				score -= 100000;
 				planet++;	
+				update_values(); 
 				
 			}
 			else {
 				alert( "You don't have enough rats!");
 			}
 			break;
-		case "ratgod":
+		case "jesus":
 			if(score >= 50000000) {
 			score -= 50000000;
-			ratgod++;	
+			jesus++;	
+			update_values(); 
 			}
 			else {
 				alert( "You don't have enough rats!");
 			}
 			break;
 	}
-	document.getElementById("score").value=score; 
+	update_values(); 
 }
 
 function saveCookies() {
@@ -156,11 +180,36 @@ function saveCookies() {
 	document.cookie = "exterminators=" + exterminator + ";" + expires;
 	document.cookie = "factories=" + factory + ";" + expires;
 	document.cookie = "planets=" + planet + ";" + expires;
-	document.cookie = "ratgods=" + ratgod + ";" + expires;
+	document.cookie = "jesus=" + jesus + ";" + expires;
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
 
 function loadCookies() {
-	
+	score = Number(getCookie("score"));
+	grill = Number(getCookie("grill"));
+	chef = Number(getCookie("chef"));
+	trap = Number(getCookie("trap"));
+	cat = Number(getCookie("cat"));
+	poison = Number(getCookie("poison"));
+	exterminator = Number(getCookie("exterminator"));
+	factory = Number(getCookie("factory"));
+	planet = Number(getCookie("planet"));
+	ratgod = Number(getCookie("jesus"));
 }
 
 // dispense bonuses every second
@@ -173,8 +222,8 @@ function bonus() {
 	score+=exterminator*45;
 	score+=factory*60;
 	score+=planet*100;
-	score+=ratgod*250;
-	document.getElementById("score").value=score; 
+	score+=jesus*250;
+	update_values(); 
 	saveCookies();
 }
 
