@@ -10,8 +10,9 @@ body {
 }
 
 h1 {
-	color: white;
-}
+	color: #760001;
+	
+	}
 
 #store {
 	font-family: "Comic Sans MS", cursive, sans-serif;
@@ -31,7 +32,7 @@ p.top {
 #stats {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
-	vertical-align: text-top;
+	
 
 
 }
@@ -40,4 +41,3 @@ p.top {
 	font-family: "Comic Sans MS", cursive, sans-serif;
 	color: red;
 }
-
