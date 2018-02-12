@@ -7,7 +7,7 @@ var chef = 0;
 var trap = 0;
 var cat = 0;
 var poison= 0;
-var exterminator = 0;
+var catcher = 0;
 var factory = 0;
 var planet = 0;
 var jesus = 0;
@@ -42,6 +42,9 @@ window.onload = function() {
 	});
 	document.getElementById("jesusButton").addEventListener("click", function() {
 		shop("jesus");
+	});
+	document.getElementById("reset").addEventListener("click", function() {
+		clear_score();
 	});
 
 };
@@ -124,7 +127,7 @@ function shop(sel) {
 		case "catcher":
 			if(score >= 5000) {
 				score -= 5000;
-				exterminator++;
+				catcher++;
 				update_values(); 
 			}
 			else {
@@ -177,7 +180,7 @@ function saveCookies() {
 	document.cookie = "trap=" + trap + ";" + expires;
 	document.cookie = "cats=" + cat + ";" + expires;
 	document.cookie = "poison=" + poison + ";" + expires;
-	document.cookie = "exterminators=" + exterminator + ";" + expires;
+	document.cookie = "catchers=" + catcher + ";" + expires;
 	document.cookie = "factories=" + factory + ";" + expires;
 	document.cookie = "planets=" + planet + ";" + expires;
 	document.cookie = "jesus=" + jesus + ";" + expires;
@@ -206,10 +209,10 @@ function loadCookies() {
 	trap = Number(getCookie("trap"));
 	cat = Number(getCookie("cat"));
 	poison = Number(getCookie("poison"));
-	exterminator = Number(getCookie("exterminator"));
+	catcher = Number(getCookie("catcher"));
 	factory = Number(getCookie("factory"));
 	planet = Number(getCookie("planet"));
-	ratgod = Number(getCookie("jesus"));
+	jesus = Number(getCookie("jesus"));
 }
 
 // dispense bonuses every second
@@ -219,11 +222,24 @@ function bonus() {
 	score+=trap*2.5;
 	score+=cat*10;
 	score+=poison*20;
-	score+=exterminator*45;
+	score+=catcher*45;
 	score+=factory*60;
 	score+=planet*100;
 	score+=jesus*250;
 	update_values(); 
 	saveCookies();
+}
+
+function clear_score() {
+	score = 0;
+	grill = 0;
+	chef = 0;
+	trap = 0;
+	cat = 0;
+	poison = 0;
+	catcher = 0;
+	factory = 0;
+	planet = 0;
+	jesus = 0;
 }
 
