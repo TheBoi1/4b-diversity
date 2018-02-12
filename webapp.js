@@ -135,8 +135,8 @@ function shop(sel) {
 			}
 			break;
 		case "factory":
-			if(score >= 50000) {
-				score -= 50000;
+			if(score >= 10000) {
+				score -= 10000;
 				factory++;	
 				update_values(); 
 			}
@@ -145,8 +145,8 @@ function shop(sel) {
 			}
 			break;
 		case "planet":
-			if(score >= 100000) {
-				score -= 100000;
+			if(score >= 50000) {
+				score -= 50000;
 				planet++;	
 				update_values(); 
 				
@@ -156,8 +156,8 @@ function shop(sel) {
 			}
 			break;
 		case "jesus":
-			if(score >= 50000000) {
-			score -= 50000000;
+			if(score >= 25000000) {
+			score -= 25000000;
 			jesus++;	
 			update_values(); 
 			}
@@ -222,10 +222,10 @@ function bonus() {
 	score+=trap*2.5;
 	score+=cat*10;
 	score+=poison*20;
-	score+=catcher*45;
-	score+=factory*60;
-	score+=planet*100;
-	score+=jesus*250;
+	score+=catcher*50;
+	score+=factory*125;
+	score+=planet*750;
+	score+=jesus*380000;
 	update_values(); 
 	saveCookies();
 }
