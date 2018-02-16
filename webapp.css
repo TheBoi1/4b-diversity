@@ -16,7 +16,7 @@ h1 {
 	}
 
 #store {
-	font-family: fantasy;
+	font-family: fantasy; 
 
 	color: red;
 }
@@ -25,7 +25,7 @@ h1 {
 
 /* stats text align, fonts, and color*/
 #stats {
-	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-family: fantasy;
 	color: red;
 	
 
