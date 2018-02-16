@@ -1,6 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
 
+#store {
+	background-color: white;
+	float: left;
+}
+
+#rightCol {
+	float: right;
+}
+
+#leftCol {
+	float: left;
+}
+
 body {
 	background-image: url("blue.jpg");
 	background-size:2700px;
