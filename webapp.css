@@ -2,50 +2,55 @@
 /* CSS Document */
 
 #store {
-	background-color: white;
-	float: left;
+	background-color: white
 }
 
-#rightCol {
+	#rightCol {
 	float: right;
 }
 
-#leftCol {
+		#leftCol {
 	float: left;
 }
 
-body {
-	background-image: url("blue.jpg");
-	background-size:2700px;
-	background-repeat: no-repeat;
+		body {
+			/* Background images and sizes*/
+	background-image: url("images/main blue copy.jpg");
+	background-size:500px;
+	background-color: #0028BA
+
 }
-#score {
+		#score {
 	text-align: right;
 }
 
-h1 {
+		h1 {
 	color: red;
+	background-color: none
 	
 	}
 
-#store {
+		#store {
 	font-family: fantasy; 
-
+	background-color: black;
 	color: red;
 }
  
 
 
 /* stats text align, fonts, and color*/
-#stats {
+		#stats {
 	font-family: fantasy;
 	color: red;
+	background-color:black;
 	
 
 
 }
 /* wrapper color and fonts*/
-#wrapper {
+		#wrapper {
 	font-family: cursive;
-	color: red;
-}
+	color: orange;
+		background-image: url("images/blue.jpg");
+		}
+	
